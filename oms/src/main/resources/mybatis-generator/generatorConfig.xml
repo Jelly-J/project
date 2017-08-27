@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 2 <!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+ 6 <generatorConfiguration>
+ 7     <classPathEntry location="C:/Oracle/Middleware/wlserver_10.3/server/lib/ojdbc6.jar"/>
+ 9     <context id="my" targetRuntime="MyBatis3">
+10         <commentGenerator>
+11             <property name="suppressDate" value="false"/>
+12             <property name="suppressAllComments" value="true"/>
+13         </commentGenerator>
+14 
+15         <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+                           connectionURL="jdbc:oracle:thin:@172.20.16.***:1521:CARGO"
+                           userId="***"
+                           password="***"/>
+18 
+19         <javaModelGenerator targetPackage="ctas.test.entity" targetProject="D:/yangjm/Code/CTAS/JAVAEE/CTAS2CCSP/src/main/java">
+21             <property name="enableSubPackages" value="true"/>
+22             <property name="trimStrings" value="true"/>
+           </javaModelGenerator>
+24 
+25         <sqlMapGenerator targetPackage="ctas.test.entity.xml"
+                            targetProject="D:/yangjm/Code/CTAS/JAVAEE/CTAS2CCSP/src/main/java">
+27             <property name="enableSubPackages" value="true"/>
+28         </sqlMapGenerator>
+29 
+30         <javaClientGenerator targetPackage="ctas.test.mapper"
+                                targetProject="D:/yangjm/Code/CTAS/JAVAEE/CTAS2CCSP/src/main/java" type="XMLMAPPER">
+32             <property name="enableSubPackages" value="true"/>
+33         </javaClientGenerator>
+34 
+40         <table tableName="CTAS_FEE_BASE" domainObjectName="FeeBase"
+                  enableCountByExample="false" enableUpdateByExample="false"
+                  enableDeleteByExample="false" enableSelectByExample="false"
+                  selectByExampleQueryId="false">
+46         </table>
+47 
+48     </context>
+49 </generatorConfiguration>
